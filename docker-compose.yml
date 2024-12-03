@@ -12,14 +12,12 @@ services:
     volumes:
       - "terraria-tmodloader:/data/tModLoader/"
     environment:
-      # Download the Calamity mod and CalamityMusic mod
-      TMOD_AUTODOWNLOAD: "2824688072,2824688266"
-      # Enable mods
-      TMOD_ENABLEDMODS: "2824688072,2824688266"
-      # Shutdown Message and Autosave Interval (In Minutes)
+      # Mods
+      TMOD_AUTODOWNLOAD: "2824688072,2824688266,2816188633,2815010161,2564645933,2826802614,2817496179,2597324266,2563309347,2619954303,2877850919,2816941454,2856742618,2868553455"
+      TMOD_ENABLEDMODS: "2824688072,2824688266,2816188633,2815010161,2564645933,2826802614,2817496179,2597324266,2563309347,2619954303,2877850919,2816941454,2856742618,2868553455"
+      # Server Settings
       TMOD_SHUTDOWN_MESSAGE: "Server will be closed. Shutdown in progress..."
       TMOD_AUTOSAVE_INTERVAL: "15"
-      # Server Settings
       TMOD_MOTD: "Welcome to Underworld Mines Server!"
       TMOD_PASS: ${TMOD_PASS}
       TMOD_MAXPLAYERS: "8"
