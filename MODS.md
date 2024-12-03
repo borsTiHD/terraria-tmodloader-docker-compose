@@ -20,10 +20,6 @@
 | 2562915378 | Max Stack Plus Extra | [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=2562915378&searchtext=) | ❌ disabled |
 | 2838188064 | Basic Automated (Vein) Mining | [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=2838188064&searchtext=) | ❌ disabled |
 
-## Instructions
-
-1. ...
-
 ## Note
 
 Make sure that all players use the same mods and settings to avoid compatibility issues.
