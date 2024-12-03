@@ -1,0 +1,36 @@
+version: "3"
+services:
+  terraria-tmodloader:
+    container_name: "terraria-tmodloader"
+    image: "jacobsmile/tmodloader1.4:latest"
+    restart: always
+    stop_grace_period: 2m
+    ports:
+      - "7777:7777"
+    expose:
+      - "7777"
+    volumes:
+      - "terraria-tmodloader:/data/tModLoader/"
+    environment:
+      # Download the Calamity mod and CalamityMusic mod
+      TMOD_AUTODOWNLOAD: "2824688072,2824688266"
+      # Enable mods
+      TMOD_ENABLEDMODS: "2824688072,2824688266"
+      # Shutdown Message and Autosave Interval (In Minutes)
+      TMOD_SHUTDOWN_MESSAGE: "Server will be closed. Shutdown in progress..."
+      TMOD_AUTOSAVE_INTERVAL: "15"
+      # Server Settings
+      TMOD_MOTD: "Welcome to Underworld Mines Server!"
+      TMOD_PASS: ${TMOD_PASS}
+      TMOD_MAXPLAYERS: "8"
+      # The following world settings are only used when generating a new world.
+      TMOD_WORLDNAME: "Underworld Mines"
+      TMOD_WORLDSIZE: "3"
+      # TMOD_WORLDSEED: "not the bees!"
+      # Difficulty: 0 = Normal, 1 = Expert, 2 = Master, 3 = Journey
+      TMOD_DIFFICULTY: "1"
+      # (Deprecated) If TMOD_USECONFIGFILE is set to "Yes", it is expected to have a serverconfig.txt mapped. The Server Settings above will be ignored.
+      TMOD_USECONFIGFILE: "No"
+      UPDATE_NOTICE: "false"
+volumes:
+  terraria-tmodloader: null
